@@ -1,0 +1,87 @@
+/* Centering the content and applying a soft pink gradient background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #fbe3e8, #f8cdd1);
+    color: #5a3e4a;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling the timer display */
+.timer {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #8a4f65;
+    text-shadow: 0 0 12px rgba(138, 79, 101, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Arrange buttons in one row */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* General styling for buttons and inputs */
+button, input {
+    margin: 10px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+/* Individual button styles with soft pastel colors */
+.start { background: #ffafbd; }
+.pause { background: #ffc3a0; }
+.reset { background: #f8a5c2; }
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Input styling */
+input {
+    background: #fff;
+    color: #5a3e4a;
+    padding: 15px;
+    text-align: center;
+    width: 100px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+/* Firework effect */
+.spark {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #ff0000, #ffcc00);
+    border-radius: 50%;
+    animation: explode 2s ease-out forwards;
+}
+
+@keyframes explode {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+/* Styling for the attribution text */
+.attribution {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #8a4f65;
+}
